@@ -26,84 +26,38 @@
       --text: var(--dark-text);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); }
 
     nav {
-      position: sticky;
-      top: 0;
-      background: var(--paper);
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      border-bottom: 2px dashed var(--primary);
-      z-index: 100;
+      position: sticky; top: 0; background: var(--paper);
+      display: flex; justify-content: center; gap: 20px; padding: 15px;
+      border-bottom: 2px dashed var(--primary); z-index: 100;
     }
 
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-    }
+    nav a { text-decoration: none; color: var(--text); font-weight: 600; }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: var(--paper);
-    }
+    header { text-align: center; padding: 60px 20px; background: var(--paper); }
 
-    header h1 {
-      font-family: 'Patrick Hand', cursive;
-      font-size: 3rem;
-    }
+    header h1 { font-family: 'Patrick Hand', cursive; font-size: 3rem; }
 
-    .toggle {
-      margin-top: 15px;
-      padding: 8px 16px;
-      border-radius: 10px;
-      border: none;
-      background: var(--secondary);
-      cursor: pointer;
-    }
+    .toggle { margin-top: 15px; padding: 8px 16px; border-radius: 10px; border: none; background: var(--secondary); cursor: pointer; }
 
-    section {
-      padding: 50px 20px;
-    }
+    section { padding: 50px 20px; }
 
-    .about {
-      max-width: 700px;
-      margin: auto;
-      text-align: center;
-    }
+    .about { max-width: 700px; margin: auto; text-align: center; }
 
+    /* FILTER BUTTON */
     .filter {
-      text-align: center;
-      margin-bottom: 20px;
+      text-align: center; margin-bottom: 20px;
     }
 
     .filter button {
-      margin: 5px;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 10px;
+      margin: 5px; padding: 8px 16px;
+      border: none; border-radius: 10px;
       background: var(--primary);
       cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .filter button:hover {
-      transform: scale(1.05);
     }
 
     .gallery {
@@ -114,81 +68,51 @@
 
     .card {
       background: var(--paper);
-      padding: 15px;
-      border-radius: 20px;
+      padding: 15px; border-radius: 20px;
       box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
       transform: rotate(-1deg);
-      transition: 0.3s;
-      position: relative;
+      transition: 0.3s; position: relative;
     }
 
-    .card:nth-child(even) {
-      transform: rotate(1deg);
-    }
+    .card:nth-child(even) { transform: rotate(1deg); }
+    .card:hover { transform: scale(1.05) rotate(0deg); }
 
-    .card:hover {
-      transform: scale(1.05) rotate(0deg);
-    }
+    .card img { width: 100%; border-radius: 15px; }
 
-    .card img {
-      width: 100%;
-      border-radius: 15px;
-    }
+    .card h3 { margin-top: 10px; font-family: 'Patrick Hand', cursive; }
 
-    .card h3 {
-      margin-top: 10px;
-      font-family: 'Patrick Hand', cursive;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      margin-top: 5px;
-    }
+    .card p { font-size: 0.9rem; margin-top: 5px; }
 
     .label {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
+      position: absolute; bottom: 10px; right: 10px;
       background: var(--secondary);
-      padding: 4px 10px;
-      border-radius: 10px;
+      padding: 4px 10px; border-radius: 10px;
       font-size: 0.7rem;
     }
 
     .tape {
-      width: 60px;
-      height: 20px;
-      background: var(--accent);
-      position: absolute;
-      top: -10px;
-      left: 50%;
+      width: 60px; height: 20px; background: var(--accent);
+      position: absolute; top: -10px; left: 50%;
       transform: translateX(-50%) rotate(-5deg);
       opacity: 0.7;
     }
 
-    .contact {
-      text-align: center;
-    }
+    .contact { text-align: center; }
 
     .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: var(--primary);
-      border-radius: 10px;
-      text-decoration: none;
-      color: black;
+      display: inline-block; margin: 10px;
+      padding: 10px 20px; background: var(--primary);
+      border-radius: 10px; text-decoration: none; color: black;
     }
 
     footer {
-      text-align: center;
-      padding: 30px;
+      text-align: center; padding: 30px;
       background: var(--paper);
       border-top: 4px dashed var(--secondary);
     }
+
   </style>
 </head>
-
 <body>
 
 <nav>
@@ -221,26 +145,25 @@
 
   <div class="gallery">
 
-    <!-- CARD -->
     <div class="card" data-category="finished">
       <div class="tape"></div>
-      <img src="images/art-01.PNG" alt="art-01" loading="lazy">
+      <img src="images/art-01.PNG">
       <h3>Artwork Finished</h3>
       <p>Karya sudah selesai</p>
       <div class="label">Finished</div>
     </div>
 
-    <div class="card" data-category="finished">
+     <div class="card" data-category="finished">
       <div class="tape"></div>
-      <img src="images/art-04.PNG" alt="art-04" loading="lazy">
+      <img src="images/art-04.PNG">
       <h3>Artwork Finished</h3>
       <p>Karya sudah selesai</p>
       <div class="label">Finished</div>
     </div>
 
-    <div class="card" data-category="finished">
+     <div class="card" data-category="finished">
       <div class="tape"></div>
-      <img src="images/art-05.PNG" alt="art-05" loading="lazy">
+      <img src="images/art-05.PNG">
       <h3>Artwork Finished</h3>
       <p>Karya sudah selesai</p>
       <div class="label">Finished</div>
@@ -248,7 +171,39 @@
 
     <div class="card" data-category="unfinished">
       <div class="tape"></div>
-      <img src="images/art-13.PNG" alt="art-13" loading="lazy">
+      <img src="images/art-13.PNG">
+      <h3>Sketch</h3>
+      <p>Masih proses</p>
+      <div class="label">Unfinished</div>
+    </div>
+
+     <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-06.PNG">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-07.PNG">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-09.PNG">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="unfinished">
+      <div class="tape"></div>
+      <img src="images/art-08.PNG">
       <h3>Sketch</h3>
       <p>Masih proses</p>
       <div class="label">Unfinished</div>
@@ -256,23 +211,7 @@
 
     <div class="card" data-category="finished">
       <div class="tape"></div>
-      <img src="images/art-06.PNG" alt="art-06" loading="lazy">
-      <h3>Artwork Finished</h3>
-      <p>Karya sudah selesai</p>
-      <div class="label">Finished</div>
-    </div>
-
-    <div class="card" data-category="finished">
-      <div class="tape"></div>
-      <img src="images/art-07.PNG" alt="art-07" loading="lazy">
-      <h3>Artwork Finished</h3>
-      <p>Karya sudah selesai</p>
-      <div class="label">Finished</div>
-    </div>
-
-    <div class="card" data-category="finished">
-      <div class="tape"></div>
-      <img src="images/art-09.PNG" alt="art-09" loading="lazy">
+      <img src="images/art-10.PNG">
       <h3>Artwork Finished</h3>
       <p>Karya sudah selesai</p>
       <div class="label">Finished</div>
@@ -280,7 +219,7 @@
 
     <div class="card" data-category="unfinished">
       <div class="tape"></div>
-      <img src="images/art-08.PNG" alt="art-08" loading="lazy">
+      <img src="images/art-03.PNG">
       <h3>Sketch</h3>
       <p>Masih proses</p>
       <div class="label">Unfinished</div>
@@ -288,23 +227,7 @@
 
     <div class="card" data-category="finished">
       <div class="tape"></div>
-      <img src="images/art-10.PNG" alt="art-10" loading="lazy">
-      <h3>Artwork Finished</h3>
-      <p>Karya sudah selesai</p>
-      <div class="label">Finished</div>
-    </div>
-
-    <div class="card" data-category="unfinished">
-      <div class="tape"></div>
-      <img src="images/art-03.PNG" alt="art-03" loading="lazy">
-      <h3>Sketch</h3>
-      <p>Masih proses</p>
-      <div class="label">Unfinished</div>
-    </div>
-
-    <div class="card" data-category="finished">
-      <div class="tape"></div>
-      <img src="images/art-11.PNG" alt="art-11" loading="lazy">
+      <img src="images/art-11.PNG">
       <h3>Artwork Finished</h3>
       <p>Karya sudah selesai</p>
       <div class="label">Finished</div>
@@ -312,21 +235,24 @@
 
     <div class="card" data-category="finished">
       <div class="tape"></div>
-      <img src="images/art-12.PNG" alt="art-12" loading="lazy">
+      <img src="images/art-12.PNG">
       <h3>Artwork Finished</h3>
       <p>Karya sudah selesai</p>
       <div class="label">Finished</div>
     </div>
 
+     
+
     <div class="card" data-category="unfinished">
       <div class="tape"></div>
-      <img src="images/art-02.PNG" alt="art-02" loading="lazy">
+      <img src="images/art-02.PNG">
       <h3>Sketch</h3>
       <p>Masih proses</p>
       <div class="label">Unfinished</div>
     </div>
 
   </div>
+
 </section>
 
 <section id="contact">
@@ -353,8 +279,7 @@ function filterSelection(category) {
     if (category === 'all') {
       card.style.display = 'block';
     } else {
-      card.style.display =
-        card.getAttribute('data-category') === category ? 'block' : 'none';
+      card.style.display = card.dataset.category === category ? 'block' : 'none';
     }
   });
 }
