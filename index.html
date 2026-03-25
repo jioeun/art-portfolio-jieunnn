@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Scrapbook Portfolio</title>
 
-  <!-- NO favicon -->
-  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;400;600&display=swap');
 
@@ -101,6 +99,11 @@
       border-radius: 10px;
       background: var(--primary);
       cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .filter button:hover {
+      transform: scale(1.05);
     }
 
     .gallery {
@@ -218,17 +221,111 @@
 
   <div class="gallery">
 
-    <!-- contoh card -->
+    <!-- CARD -->
     <div class="card" data-category="finished">
       <div class="tape"></div>
-      <img src="images/art-01.PNG">
+      <img src="images/art-01.PNG" alt="art-01" loading="lazy">
       <h3>Artwork Finished</h3>
       <p>Karya sudah selesai</p>
       <div class="label">Finished</div>
     </div>
 
-    <!-- sisanya tetap sama -->
-    
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-04.PNG" alt="art-04" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-05.PNG" alt="art-05" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="unfinished">
+      <div class="tape"></div>
+      <img src="images/art-13.PNG" alt="art-13" loading="lazy">
+      <h3>Sketch</h3>
+      <p>Masih proses</p>
+      <div class="label">Unfinished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-06.PNG" alt="art-06" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-07.PNG" alt="art-07" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-09.PNG" alt="art-09" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="unfinished">
+      <div class="tape"></div>
+      <img src="images/art-08.PNG" alt="art-08" loading="lazy">
+      <h3>Sketch</h3>
+      <p>Masih proses</p>
+      <div class="label">Unfinished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-10.PNG" alt="art-10" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="unfinished">
+      <div class="tape"></div>
+      <img src="images/art-03.PNG" alt="art-03" loading="lazy">
+      <h3>Sketch</h3>
+      <p>Masih proses</p>
+      <div class="label">Unfinished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-11.PNG" alt="art-11" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="finished">
+      <div class="tape"></div>
+      <img src="images/art-12.PNG" alt="art-12" loading="lazy">
+      <h3>Artwork Finished</h3>
+      <p>Karya sudah selesai</p>
+      <div class="label">Finished</div>
+    </div>
+
+    <div class="card" data-category="unfinished">
+      <div class="tape"></div>
+      <img src="images/art-02.PNG" alt="art-02" loading="lazy">
+      <h3>Sketch</h3>
+      <p>Masih proses</p>
+      <div class="label">Unfinished</div>
+    </div>
+
   </div>
 </section>
 
@@ -257,7 +354,7 @@ function filterSelection(category) {
       card.style.display = 'block';
     } else {
       card.style.display =
-        card.dataset.category === category ? 'block' : 'none';
+        card.getAttribute('data-category') === category ? 'block' : 'none';
     }
   });
 }
